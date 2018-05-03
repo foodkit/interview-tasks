@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Backend technical task</title>
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://foodkit.io/images/favicons/apple-touch-icon-57x57-fb316047.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://foodkit.io/images/favicons/apple-touch-icon-114x114-26e590cd.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://foodkit.io/images/favicons/apple-touch-icon-72x72-813837cd.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://foodkit.io/images/favicons/apple-touch-icon-144x144-eb8f60ab.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://foodkit.io/images/favicons/apple-touch-icon-60x60-e312e9ee.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://foodkit.io/images/favicons/apple-touch-icon-120x120-3ff4939c.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://foodkit.io/images/favicons/apple-touch-icon-76x76-dc836424.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://foodkit.io/images/favicons/apple-touch-icon-152x152-7e08aef9.png" />
+    <link rel="icon" type="image/png" href="https://foodkit.io/images/favicons/favicon-196x196-a80dfd8f.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="https://foodkit.io/images/favicons/favicon-96x96-5752cf18.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="https://foodkit.io/images/favicons/favicon-32x32-94a1e00f.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://foodkit.io/images/favicons/favicon-16x16-d019777e.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="https://foodkit.io/images/favicons/favicon-128-b79a0f06.png" sizes="128x128" />
+    <meta name="application-name" content="Foodkit.io"/>
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="https://foodkit.io/images/favicons/mstile-144x144-eb8f60ab.png" />
+    <meta name="msapplication-square70x70logo" content="https://foodkit.io/images/favicons/mstile-70x70-b79a0f06.png" />
+    <meta name="msapplication-square150x150logo" content="https://foodkit.io/images/favicons/mstile-150x150-3c8a6c2a.png" />
+    <meta name="msapplication-wide310x150logo" content="https://foodkit.io/images/favicons/mstile-310x150-65dec780.png" />
+    <meta name="msapplication-square310x310logo" content="https://foodkit.io/images/favicons/mstile-310x310-0f43d71b.png" />
+    <!-- /favicons -->
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="/images/logo-small.png" alt="Foodkit logo" />
+        <h2></h2>
+      </header>
+      <section>
+        <h1>Backend technical task</h1>
+        <p>Somchai runs a motorbike taxi company and wants to create a mobile app so his customers can conveniently book rides in advance and know the fare before getting on the bike. He types "build mobile app" into Google and discovers he needs to build an API to manage the business logic and data persistence for his app.</p>
+<p>The first API endpoint he will need is a "quotation" endpoint. This will take the pickup and drop-off location from the user and return a price estimate for the journey.</p>
+<p>Somchai realises that he can only service a small area of Bangkok, as he only has drivers in some suburbs. He takes out a map of Bangkok and draws a rectangle around the area he believes his riders can accept jobs from.</p>
+<p>
+  <img src="/images/map.png" id="delivery-map"/>
+</p>
+<p>If the user tries to specify a pickup or drop-off location outside of this rectangle, Somchai's riders cannot service it, so the API will return an error state.</p>
+<p>As an experienced former motorbike taxi himself, Somchai knows the fare charged will depend on the distance. He decides for simplicity he'll just use the straightline distance between the pickup and drop-off location, and calculate the price based on a set per-kilometre fee.</p>
+<p>
+For the purpose of this exercise, you should build the "quotation" endpoint. Your API will need to be configurable with the following settings:
+<ul>
+<li>Delivery boundary (2 &times; latitude,longitude pairs, which are the top-left and bottom-right points demarking the serviceable area rectangle)</li>
+<li>Per kilometer cost</li>
+</ul>
+</p>
+<p>The quotation endpoint should accept a payload of the format:</p>
+<pre>POST api/quotation
+{
+  "from": {"lat": 0.0, "lng": 0.0},
+  "to": {"lat": 0.0, "lng": 0.0}
+}</pre>
+<p>If either the "from" or "to" location are outside of the service area, the API should return an error state with some message explaining the failure. If the "from" and "to" location are both within the service area, the API should respond as follows:</p>
+<pre>200 OK
+{
+  "from": {"lat": 0.0, "lng": 0.0},
+  "to": {"lat": 0.0, "lng": 0.0},
+  "distance": 1.2,
+  "cost": 80.0
+}</pre>
+
+<a href="/" class="button">&lt; Back</a>
+
+      </section>
+    </div>
+    <footer>Copyright &copy; Kinja Digital Pte Ltd 2018</footer>
+  </body>
+</html>
