@@ -1,0 +1,34 @@
+---
+title: Backend technical task
+---
+<p>Somchai runs a motorbike taxi company and wants to create a mobile app so his customers can conveniently book rides in advance and know the fare before getting on the bike. He types "build mobile app" into Google and discovers he needs to build an API to manage the business logic and data persistence for his app.</p>
+<p>The first API endpoint he will need is a "quotation" endpoint. This will take the pickup and drop-off location from the user and return a price estimate for the journey.</p>
+<p>Somchai realises that he can only service a small area of Bangkok, as he only has drivers in some suburbs. He takes out a map of Bangkok and draws a rectangle around the area he believes his riders can accept jobs from.</p>
+<p>
+  <img src="/images/map.png" id="delivery-map"/>
+</p>
+<p>If the user tries to specify a pickup or drop-off location outside of this rectangle, Somchai's riders cannot service it, so the API will return an error state.</p>
+<p>As an experienced former motorbike taxi himself, Somchai knows the fare charged will depend on the distance. He decides for simplicity he'll just use the straightline distance between the pickup and drop-off location, and calculate the price based on a set per-kilometre fee.</p>
+<p>
+For the purpose of this exercise, you should build the "quotation" endpoint. Your API will need to be configurable with the following settings:
+<ul>
+<li>Delivery boundary (2 &times; latitude,longitude pairs, which are the top-left and bottom-right points demarking the serviceable area rectangle)</li>
+<li>Per kilometer cost</li>
+</ul>
+</p>
+<p>The quotation endpoint should accept a payload of the format:</p>
+<pre>POST api/quotation
+{
+  "from": {"lat": 0.0, "lng": 0.0},
+  "to": {"lat": 0.0, "lng": 0.0}
+}</pre>
+<p>If either the "from" or "to" location are outside of the service area, the API should return an error state with some message explaining the failure. If the "from" and "to" location are both within the service area, the API should respond as follows:</p>
+<pre>200 OK
+{
+  "from": {"lat": 0.0, "lng": 0.0},
+  "to": {"lat": 0.0, "lng": 0.0},
+  "distance": 1.2,
+  "cost": 80.0
+}</pre>
+
+<a href="/" class="button">&lt; Back</a>

@@ -1,24 +1,90 @@
+$blue: #087fcd;
+
 body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
+  font-family: "Lato", sans-serif;
+  padding: 10vh 1rem;
+  line-height: 1.5em;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto 0 auto;
+  padding: 15px;
+}
+header {
   text-align: center;
 }
-
-a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
-  }
+header img {
+  width: 25%;
+  height: 25%;
+  margin: 15px auto 15px auto;
+}
+p {
+  text-align: justify;
+}
+footer {
+  margin: 40px;
+  color: rgb(100,100,100);
+  font-size: 0.8em;
+  text-align: center;
+}
+.button {
+  text-decoration: none;
+  width: 7em;
+  display: block;
+  background-color: blue;
+  background-color: rgb(255, 184, 0);
+  border-bottom-color: rgb(255, 184, 0);
+  border-bottom-left-radius: 160px;
+  border-bottom-right-radius: 160px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0px;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-color: rgb(255, 184, 0);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: rgb(255, 184, 0);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: rgb(255, 184, 0);
+  border-top-left-radius: 160px;
+  border-top-right-radius: 160px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  box-shadow: rgba(0, 0, 0, 0.26) 1px 5px 25px 0px;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 300;
+  height: 53px;
+  outline-color: rgb(255, 255, 255);
+  outline-style: none;
+  outline-width: 0px;
+  padding-bottom: 12px;
+  padding-left: 10.2px;
+  padding-right: 10.2px;
+  padding-top: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+#delivery-map {
+  width: 100%;
+  max-width: 730px;
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+.buttons {
+  display: flex;
+  margin: 3em auto 0 auto;
+  flex-direction: row;
+  .button {
+    margin: 0 auto;
+  }
 }
