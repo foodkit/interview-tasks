@@ -47,7 +47,7 @@
   <img src="images/map.png" id="delivery-map"/>
 </p>
 <p>If the user tries to specify a pickup or drop-off location outside of this rectangle, Somchai's riders cannot service it, so the API will return an error state.</p>
-<p>As an experienced former motorbike taxi himself, Somchai knows the fare charged will depend on the distance. He decides for simplicity he'll just use the straightline distance between the pickup and drop-off location, and calculate the price based on a set per-kilometre fee.</p>
+<p>As an experienced former motorbike taxi himself, Somchai knows the fare charged will depend on the distance. He decides for simplicity he'll just use the <strong>straightline distance</strong> between the pickup and drop-off location, and calculate the price based on a set per-kilometre fee.</p>
 <p>
 For the purpose of this exercise, you should build the "quotation" endpoint. Your API will need to be configurable with the following settings:
 <ul>
@@ -70,8 +70,11 @@ For the purpose of this exercise, you should build the "quotation" endpoint. You
   "distance": 1.2,
   "cost": 66.8
 }</pre>
-<p>In the example above, the "flag fall" is set to <strong>50 THB</strong> and the per kilometre cost is <strong>14</strong>, so <pre>50 + (14 * 1.2) = 66.8</pre>. Note that the cost should be rounded to a single decimal point of accuracy.</p>
-
+<p>In the example above, the "flag fall" is set to <strong>50 THB</strong> and the per kilometre cost is <strong>14</strong>, so:</p>
+<pre>
+50 + (14 * 1.2) = 66.8
+</pre>
+<p>Note that the cost should be rounded to a single decimal point of accuracy.</p>
 <a href="index.html" class="button">&lt; Back</a>
 
       </section>
