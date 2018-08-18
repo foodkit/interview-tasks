@@ -1,6 +1,19 @@
 $blue: #087fcd;
+$logo-dim: 300px;
+$sm-logo-dim: 175px;
+
+img.foodkit-logo {
+  width: $logo-dim;
+  height: $logo-dim;
+
+  &.small-logo {
+    width: $sm-logo-dim;
+    height: $sm-logo-dim;
+  }
+}
 
 body {
+	color: #333;
   font-family: "Lato", sans-serif;
   padding: 10vh 1rem;
   line-height: 1.5em;
@@ -31,9 +44,9 @@ footer {
   text-decoration: none;
   width: 7em;
   display: block;
-  background-color: blue;
-  background-color: rgb(255, 184, 0);
-  border-bottom-color: rgb(255, 184, 0);
+  color: white;
+  background-color: rgba(63, 160, 242, 1);
+  border: solid rgba(182, 243, 232, .4) 0px;
   border-bottom-left-radius: 160px;
   border-bottom-right-radius: 160px;
   border-bottom-style: solid;
@@ -43,25 +56,22 @@ footer {
   border-image-slice: 100%;
   border-image-source: none;
   border-image-width: 1;
-  border-left-color: rgb(255, 184, 0);
   border-left-style: solid;
   border-left-width: 1px;
-  border-right-color: rgb(255, 184, 0);
   border-right-style: solid;
   border-right-width: 1px;
-  border-top-color: rgb(255, 184, 0);
   border-top-left-radius: 160px;
   border-top-right-radius: 160px;
   border-top-style: solid;
   border-top-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.26) 1px 5px 25px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 5px 25px 0px;
   box-sizing: border-box;
   color: rgb(255, 255, 255);
   cursor: pointer;
   font-size: 17px;
   font-weight: 300;
   height: 53px;
-  outline-color: rgb(255, 255, 255);
+  outline-color: rgba(255, 255, 255, .1);
   outline-style: none;
   outline-width: 0px;
   padding-bottom: 12px;
