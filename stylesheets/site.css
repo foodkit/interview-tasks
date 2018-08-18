@@ -1,4 +1,12 @@
+img.foodkit-logo {
+  width: 300px;
+  height: 300px; }
+  img.foodkit-logo.small-logo {
+    width: 175px;
+    height: 175px; }
+
 body {
+  color: #333;
   font-family: "Lato", sans-serif;
   padding: 10vh 1rem;
   line-height: 1.5em; }
@@ -29,9 +37,9 @@ footer {
   text-decoration: none;
   width: 7em;
   display: block;
-  background-color: blue;
-  background-color: #ffb800;
-  border-bottom-color: #ffb800;
+  color: white;
+  background-color: #3fa0f2;
+  border: solid rgba(182, 243, 232, 0.4) 0px;
   border-bottom-left-radius: 160px;
   border-bottom-right-radius: 160px;
   border-bottom-style: solid;
@@ -41,19 +49,16 @@ footer {
   border-image-slice: 100%;
   border-image-source: none;
   border-image-width: 1;
-  border-left-color: #ffb800;
   border-left-style: solid;
   border-left-width: 1px;
-  border-right-color: #ffb800;
   border-right-style: solid;
   border-right-width: 1px;
-  border-top-color: #ffb800;
   border-top-left-radius: 160px;
   border-top-right-radius: 160px;
   border-top-style: solid;
   border-top-width: 1px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.26) 1px 5px 25px 0px;
-          box-shadow: rgba(0, 0, 0, 0.26) 1px 5px 25px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 5px 25px 0px;
+          box-shadow: rgba(0, 0, 0, 0.1) 1px 5px 25px 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: white;
@@ -61,7 +66,7 @@ footer {
   font-size: 17px;
   font-weight: 300;
   height: 53px;
-  outline-color: white;
+  outline-color: rgba(255, 255, 255, 0.1);
   outline-style: none;
   outline-width: 0px;
   padding-bottom: 12px;
