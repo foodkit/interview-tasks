@@ -40,8 +40,42 @@
       </header>
       <section>
         <h1>Frontend technical task</h1>
-        TBA
+        <p>For this task we're going to help our friend Somchai who owns a cafe. He wants us to build an ecommerce enabled website for his business so his customers can quickly and easily order coffee online from a range of different devices (mobile phones, tablets and desktop/laptop computers).</p>
+<p>So that we can provide a responsive and performant user experience, we decide to build it as a <strong>progressive single page web app</strong> using our favourite frontend framework (Angular, React or VueJS).</p>
+<p>One of the first things we need to do is build a page so that customers can view the information about different menu items. For this technical task, we will be building the <strong>product detail modal</strong>. This is a modal window that will appear when the customer clicks on a product they're interested in purchasing. After a couple of hours in Sketch, we come up with the following mockup for the page:</p>
+<p>
+  <img src="images/modal-example-338x668.png" id="modal-example"/>
+</p>
+<p>We notice that the mockup has the following parts:</p>
+<ul>
+  <li>A nice big image.</li>
+  <li>A floating "back" button at the top-left of the mockup.</li>
+  <li>Product information, including a "title" and "description".</li>
+  <li>The price of the product.</li>
+  <li>A quantity selector which defaults to "1" when the window is opened, with plus and minus icons next to it to increment and decrement the quantity value.</li>
+  <li>Section for selecting different product "options" (<em>more on this below</em>).</li>
+  <li>A "Add to cart button" at the very bottom of the mockup.</li>
+</ul>
+<p>We also know that we'll need to build a backend API to support this functionality but haven't decided on the technology stack yet. Instead of waiting for the API to be built, we design the <a href="https://gist.github.com/coreymcmahon/47991a051e27aa44721331de6d3f5018" target="_blank">payload format</a> and just mock out the API request so we can start work on the frontend.</p>
 
+<h2>The task</h2>
+<p>To complete this task, you will use either Angular (preferred), React or Vue.js to build a component that implements the product modal. The component will accept a single "product" as a property, which (for now) will simply be the sample JSON payload provided earlier in this document. E.g:</p>
+<pre>
+  &lt;product-component [product]="product" /&gt;
+</pre>
+<p>Some important points to note:</p>
+<ul>
+  <li>The modal will be displayed across a range of platforms, so it should be responsive.</li>
+  <li>Basic validation should be implemented (e.g: quantity cannot go below "1").</li>
+  <li>The price in the "Add to cart" button should reflect the subtotal, based on the product price, quantity and any selected options.</li>
+</ul>
+<p>
+<p>In addition, the options should be implemented according to the following logic:</p>
+<ul>
+  <li>If the "extra" has a "min" value &geq; 0, it is required and must be selected before the customer can add the product to the cart.</li>
+  <li>If the "extra" has a "max" value &geq; 1, the customer must be prevented from adding more than than number to the cart.</li>
+  <li>If the "extra" has "max" = "max" = 1, the customer must select ONE and ONLY ONE option, so it should be rendered as a radio button.</li>
+</ul>
 <a href="index.html" class="button">&lt; Back</a>
 
       </section>
