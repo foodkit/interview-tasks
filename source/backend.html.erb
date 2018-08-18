@@ -9,8 +9,8 @@ title: Backend technical task
 </p>
 <p>If the user tries to specify a pickup or drop-off location outside of this rectangle, Somchai's riders cannot service it, so the API will return an error state.</p>
 <p>As an experienced former motorbike taxi himself, Somchai knows the fare charged will depend on the distance. He decides for simplicity he'll just use the <strong>straightline distance</strong> between the pickup and drop-off location, and calculate the price based on a set per-kilometre fee.</p>
-<p>
-For the purpose of this exercise, you should build the "quotation" endpoint. Your API will need to be configurable with the following settings:
+<h2>The task</h2>
+<p>For the purpose of this exercise, you should build the "quotation" endpoint. Your API will need to be configurable with the following settings:
 <ul>
 <li>Delivery boundary (2 &times; latitude,longitude pairs, which are the top-left and bottom-right points demarking the serviceable area rectangle)</li>
 <li>Flag fall (the base fare)</li>
