@@ -41,18 +41,18 @@
       </header>
       <section>
         <h1>Backend technical task</h1>
-        <p>Somchai runs a motorbike taxi company and wants to create a mobile app so his customers can conveniently book rides in advance and know the fare before getting on the bike. He types "build mobile app" into Google and discovers he needs to build an API to manage the business logic and data persistence for his app.</p>
+        <p>Jack runs a motorbike taxi company and wants to create a mobile app so his customers can conveniently book rides in advance and know the fare before getting on the bike. He types "build mobile app" into Google and discovers he needs to build an "API" to manage the business logic and data persistence for his app.</p>
 <p>The first API endpoint he will need is a "quotation" endpoint. This will take the pickup and drop-off location from the user and return a price estimate for the journey.</p>
-<p>Somchai realises that he can only service a small area of Bangkok, as he only has drivers in some suburbs. He takes out a map of Bangkok and draws a rectangle around the area he believes his riders can accept jobs from.</p>
+<p>Jack realises that he can only service a small area of his city (Bangkok, Thailand) as he only has drivers in some suburbs. He takes out a map of Bangkok and draws a rectangle around the area he believes his riders can accept jobs from.</p>
 <p>
   <img src="images/map.png" id="delivery-map"/>
 </p>
-<p>If the user tries to specify a pickup or drop-off location outside of this rectangle, Somchai's riders cannot service it, so the API will return an error state.</p>
-<p>As an experienced former motorbike taxi himself, Somchai knows the fare charged will depend on the distance. He decides for simplicity he'll just use the <strong>straightline distance</strong> between the pickup and drop-off location, and calculate the price based on a set per-kilometre fee.</p>
+<p>If the user tries to specify a pickup or drop-off location outside of this rectangle, Jack's riders cannot service it, so the API will return an error state.</p>
+<p>As an experienced former motorbike taxi himself, Jack knows the fare charged will depend on the distance. He decides for simplicity he'll just use the <strong>straightline distance</strong> between the pickup and drop-off location, and calculate the price based on a set per-kilometre fee.</p>
 <h2>The task</h2>
 <p>For the purpose of this exercise, you should build the "quotation" endpoint. Your API will need to be configurable with the following settings:
 <ul>
-<li>Delivery boundary (2 &times; latitude,longitude pairs, which are the top-left and bottom-right points demarking the serviceable area rectangle)</li>
+<li>Delivery boundary (2 &times; latitude-longitude pairs, which are the top-left and bottom-right points demarking the serviceable area rectangle)</li>
 <li>Flag fall (the base fare)</li>
 <li>Per kilometer cost</li>
 </ul>
@@ -69,17 +69,17 @@
   "from": {"lat": 13.735161, "lng": 100.582225},
   "to": {"lat": 13.726939, "lng": 100.575302}
   "distance": 1.2,
-  "cost": 66.8
+  "cost": "8.00"
 }</pre>
-<p>In the example above, the "flag fall" is set to <strong>50 THB</strong> and the per kilometre cost is <strong>14</strong>, so:</p>
+<p>In the example above, the "flag fall" is set to <strong>$5</strong> and the per kilometre cost is <strong>$2.50</strong> and the calculated distance is <strong>1.2 km</strong>, so:</p>
 <pre>
-50 + (14 * 1.2) = 66.8
+5 + (2.5 * 1.2) = 8
 </pre>
-<p>Note that the cost should be rounded to a single decimal point of accuracy.</p>
+<p>Note that the cost should be rounded to 2 decimal places of accuracy.</p>
 <a href="index.html" class="button">&lt; Back</a>
 
       </section>
     </div>
-    <footer>Copyright &copy; Kinja Digital Pte Ltd 2018</footer>
+    <footer>Copyright &copy; Kinja Digital Pte Ltd 2020</footer>
   </body>
 </html>
